@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.marquee__slider {
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee img {
+    height: 200px; 
+    margin: 0 10px; /* Space between images */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Hover effect to pause animation */
+.marquee:hover .marquee__slider {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .marquee img {
+        height: 150px; /* Smaller height on smaller screens */
+    }
+}

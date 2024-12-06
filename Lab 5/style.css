@@ -1,0 +1,107 @@
+body {
+    background-color: #000;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.solar-system {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.sun {
+    background-color: #ffcc00;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 50px rgba(255, 204, 0, 0.7);
+}
+
+.planet {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; /* Center the orbit */
+    left: 50%; /* Center the orbit */
+    transform-origin: -150px; /* Adjust the radius */
+}
+
+.mercury {
+    background-color: #7f7f7f;
+    width: 20px;
+    height: 20px;
+    animation: orbit 10s linear infinite;
+}
+
+.venus {
+    background-color: #d69a6c;
+    width: 30px;
+    height: 30px;
+    animation: orbit 15s linear infinite;
+}
+
+.earth {
+    background-color: #3498db;
+    width: 35px;
+    height: 35px;
+    animation: orbit 20s linear infinite;
+}
+
+.mars {
+    background-color: #c0392b;
+    width: 25px;
+    height: 25px;
+    animation: orbit 25s linear infinite;
+}
+
+.jupiter {
+    background-color: #d19a6c;
+    width: 50px;
+    height: 50px;
+    animation: orbit 30s linear infinite;
+}
+
+.saturn {
+    background-color: #e1c192;
+    width: 45px;
+    height: 45px;
+    animation: orbit 35s linear infinite;
+}
+
+.uranus {
+    background-color: #4a90e2;
+    width: 40px;
+    height: 40px;
+    animation: orbit 40s linear infinite;
+}
+
+.neptune {
+    background-color: #4b8dbb;
+    width: 38px;
+    height: 38px;
+    animation: orbit 45s linear infinite;
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(150px) rotate(0deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .solar-system {
+        width: 100%;
+        height: 100%;
+    }
+}

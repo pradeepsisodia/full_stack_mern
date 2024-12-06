@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    background-color: #e0f7fa; /* Light background color */
+}
+
+.ball {
+    background-color: #ff5722; /* Ball color */
+    border-radius: 50%; /* Make it a circle */
+    width: 50px; /* Ball size */
+    height: 50px; /* Ball size */
+    position: absolute; /* Position it absolutely */
+    animation: bounce 3s ease-in-out infinite; /* Bounce animation */
+}
+
+@keyframes bounce {
+    0% {
+        left: 0; /* Start from the left */
+        bottom: 0; /* Start at the bottom */
+    }
+    25% {
+        left: 50vw; /* Move to the middle */
+        bottom: 150px; /* Move up */
+    }
+    50% {
+        left: 100vw; /* Move to the right */
+        bottom: 0; /* Move back down */
+    }
+    75% {
+        left: 50vw; /* Move back to the middle */
+        bottom: 150px; /* Move up again */
+    }
+    100% {
+        left: 0; /* Return to the left */
+        bottom: 0; /* Back to the bottom */
+    }
+}
